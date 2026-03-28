@@ -22,11 +22,13 @@ app.use("/api/chats", chatRoute);
 app.use("/api/messages", messageRoute);
 
 //TODO: add other routes
-const corsOptions = {
-  origin: process.env.CLIENT_URL,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-};
+const io = new Server(server, {
+  cors: {
+    origin: process.env.CLIENT_URL,
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
+});
 
 app.set("io", io);
 
