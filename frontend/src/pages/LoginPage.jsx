@@ -56,9 +56,9 @@ const LoginPage = () => {
               </button>
               <p>
                 Don't have an account?{" "}
-                <Link className="hover:underline" href="/register">
+                <a className="hover:underline" href="/register">
                   Register now
-                </Link>
+                </a>
               </p>
             </div>
           </form>
